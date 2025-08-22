@@ -29,6 +29,10 @@ const useBeamer = () => {
     company: company,
     company_id: company_id,
   };
+
+  window.addEventListener("beforeunload", () => {
+    localStorage.clear();
+  });
 };
 
 export default useBeamer;
