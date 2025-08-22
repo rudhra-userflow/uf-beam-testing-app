@@ -1,0 +1,111 @@
+.navbar-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.navbar {
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+  padding: var(--spacing-4) var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
+
+.navbar-brand-link {
+  color: var(--white);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+ 
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.navbar-brand-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.navbar-item {
+  margin: var(--spacing-1);
+}
+
+.navbar-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  display: block;
+  white-space: nowrap;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-link-active {
+  background-color: var(--primary-500);
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--spacing-6);
+  background-color: var(--gray-50);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
+  .navbar-nav {
+    gap: var(--spacing-1);
+  }
+  
+  .navbar-item {
+    margin: var(--spacing-05);
+  }
+  
+  .navbar-link {
+    padding: var(--spacing-15) var(--spacing-2);
+    font-size: var(--font-size-sm);
+  }
+  
+  .main-content {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar-brand-link {
+    font-size: var(--font-size-xl);
+  }
+}

@@ -1,0 +1,215 @@
+/* PerticularPostComment.css */
+
+.comments-page {
+  padding: var(--spacing-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comments-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-8) var(--spacing-4);
+  background: linear-gradient(135deg, var(--secondary-50), var(--primary-50));
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.comments-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary-800);
+  margin-bottom: var(--spacing-3);
+}
+
+.comments-description {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.comments-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8) var(--spacing-4);
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.comments-loading-spinner {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--secondary-500);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.comments-loading-text {
+  margin-left: var(--spacing-3);
+  color: var(--gray-600);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.comments-error {
+  background-color: var(--error-50);
+  border-left: 4px solid var(--error-500);
+  color: var(--error-700);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.comments-error-message {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.comments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+.comment-card {
+  background: linear-gradient(to bottom, var(--white), var(--gray-50));
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--gray-200);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary-300);
+}
+
+.comment-content {
+  padding: var(--spacing-5);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-body {
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-relaxed);
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-size: var(--font-size-base);
+}
+
+.comment-meta {
+  margin-top: auto;
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--gray-200);
+}
+
+.comment-email {
+  color: var(--secondary-600);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-1);
+}
+
+.comment-id {
+  color: var(--gray-500);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+}
+
+.comments-empty {
+  text-align: center;
+  padding: var(--spacing-12) var(--spacing-4);
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  color: var(--gray-600);
+  font-size: var(--font-size-lg);
+  font-style: italic;
+}
+
+.comments-empty p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comments-page {
+    padding: var(--spacing-4);
+  }
+  
+  .comments-header {
+    padding: var(--spacing-6) var(--spacing-3);
+  }
+  
+  .comments-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .comments-description {
+    font-size: var(--font-size-base);
+  }
+  
+  .comments-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-4);
+  }
+  
+  .comment-content {
+    padding: var(--spacing-4);
+  }
+  
+  .comments-loading {
+    padding: var(--spacing-6) var(--spacing-3);
+  }
+  
+  .comments-loading-spinner {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .comments-loading-text {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .comments-header {
+    padding: var(--spacing-4) var(--spacing-2);
+  }
+  
+  .comments-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .comments-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comment-body {
+    font-size: var(--font-size-sm);
+    -webkit-line-clamp: 4;
+  }
+}

@@ -1,0 +1,124 @@
+.home-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-6);
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-8) var(--spacing-4);
+  background: linear-gradient(135deg, var(--primary-50), var(--secondary-50));
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.home-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-800);
+  margin-bottom: var(--spacing-3);
+}
+
+.home-description {
+  font-size: var(--font-size-lg);
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.checkbox-section {
+  width: 100%;
+  max-width: 500px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-600);
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-800);
+  cursor: pointer;
+}
+
+.checkbox-help {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  text-align: center;
+  margin-top: var(--spacing-2);
+}
+
+.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-page {
+    padding: var(--spacing-4);
+  }
+  
+  .home-header {
+    padding: var(--spacing-6) var(--spacing-3);
+  }
+  
+  .home-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .home-description {
+    font-size: var(--font-size-base);
+  }
+  
+  .checkbox-container {
+    padding: var(--spacing-3);
+  }
+  
+  .checkbox-label {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    padding: var(--spacing-4) var(--spacing-2);
+  }
+  
+  .home-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .checkbox-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
