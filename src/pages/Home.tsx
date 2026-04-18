@@ -15,9 +15,11 @@ export default function Home() {
     <div className="home-page">
       <div className="home-header">
         <h1 className="home-title">Welcome to Home Page</h1>
-        <p className="home-description">Userflow is initialized for this page.</p>
+        <p className="home-description">
+          Userflow is initialized for this page.
+        </p>
       </div>
-      
+
       <div className="home-content">
         <div className="checkbox-section">
           <div className="checkbox-container">
@@ -36,9 +38,9 @@ export default function Home() {
             Please check the box to enable the Userflow demo
           </p>
         </div>
-        
+
         <button
-          className={`btn-primary ${!isChecked ? 'btn-disabled' : ''}`}
+          className={`btn-primary ${!isChecked ? "btn-disabled" : ""}`}
           disabled={!isChecked}
           onClick={showFlow}
         >

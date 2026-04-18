@@ -86,23 +86,23 @@
   .home-page {
     padding: var(--spacing-4);
   }
-  
+
   .home-header {
     padding: var(--spacing-6) var(--spacing-3);
   }
-  
+
   .home-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .home-description {
     font-size: var(--font-size-base);
   }
-  
+
   .checkbox-container {
     padding: var(--spacing-3);
   }
-  
+
   .checkbox-label {
     font-size: var(--font-size-base);
   }
@@ -112,11 +112,11 @@
   .home-header {
     padding: var(--spacing-4) var(--spacing-2);
   }
-  
+
   .home-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .checkbox-container {
     flex-direction: column;
     align-items: flex-start;

@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .navbar {
@@ -24,7 +24,7 @@
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
- 
+
   display: inline-block;
   padding: var(--spacing-2) var(--spacing-3);
   border-radius: var(--border-radius-md);
@@ -80,20 +80,20 @@
   .navbar {
     padding: var(--spacing-3) var(--spacing-4);
   }
-  
+
   .navbar-nav {
     gap: var(--spacing-1);
   }
-  
+
   .navbar-item {
     margin: var(--spacing-05);
   }
-  
+
   .navbar-link {
     padding: var(--spacing-15) var(--spacing-2);
     font-size: var(--font-size-sm);
   }
-  
+
   .main-content {
     padding: var(--spacing-4);
   }
@@ -104,7 +104,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .navbar-brand-link {
     font-size: var(--font-size-xl);
   }

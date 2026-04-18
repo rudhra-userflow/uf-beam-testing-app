@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import userflow from "userflow.js";
 import { useNavigate } from "react-router-dom";
 import { createRandomUser } from "./createRandomUser";
+import test from "node:test";
 
 const {
   userId,
@@ -20,12 +21,11 @@ const {
 const randomNumbersArray = () =>
   Array.from({ length: 3 }, () => Math.floor(Math.random() * 1000));
 
-const useUserflow = () => {
+const useUserflow = async () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     userflow.init("ct_uevqk6bpgvc7lc3pihhm5mpkoi");
-    userflow.setResourceCenterLauncherHidden(true)
     userflow.setCustomNavigate((url) => {
       navigate(url);
     });
@@ -39,7 +39,7 @@ const useUserflow = () => {
       phone: phone,
       address: address,
       avatar: avatar,
-      locale_code: "EN-us",
+      locale_code: "en-US",
       company_name: company,
       num_list: randomNumbersArray(),
       isweekday: true,
@@ -48,11 +48,11 @@ const useUserflow = () => {
       device_type: window.innerWidth > 800 ? "desktop" : "mobile",
       assignment_id: [123, 234],
       tier: "enterprise",
+      bankok: "4;26;12"
     });
 
     userflow.group(company_id, {
       company_id: "team-" + userId.slice(0, 5),
-      name: company,
       departments: ["Engineering", "Product"],
       plan: "pro",
       services: "BASIC",
@@ -61,15 +61,20 @@ const useUserflow = () => {
 
   // useEffect(() => {
   //   userflow.init("ct_uevqk6bpgvc7lc3pihhm5mpkoi");
-  //   userflow.setResourceCenterLauncherHidden(true)
-  //   userflow.identify("6ea2cbf1-a305-4fae-96cf-4e1789b808eb", {
-  //     name: "Testing User",
-  //     email: `test-email@gmail.com`,
+  //   userflow.identify("user-anon-test", {
+  //     email: "user-anon-test@gmail.com",
+  //     user_id: "user-anon-test",
+  //     locale_code: "en-US",
+  //     store_1: "store1",
   //   });
 
-  //   userflow.group(company_id, {
-  //     company_name: company,
+  //   userflow.group("abc pvt ltd", {
+  //     company_id: "abc pvt ltd",
+  //     departments: ["Engineering", "Product"],
+  //     plan: "pro",
+  //     services: "BASIC",
   //   });
+  //   userflow.track("App Loaded");
 
   // }, []);
 };

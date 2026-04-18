@@ -28,6 +28,7 @@ export default function App() {
           <Route path="app" element={<AppPage />} />
           <Route path="test" element={<TestPage />} />
           <Route path="query" element={<QueryParamsPage />} />
+          <Route path="utmpage" element={<Home />} />
           <Route path="start-with-link" element={<StartWithLink />} />
           <Route path="post" element={<JsonPlaceHolderPage />} />
           <Route path="post-fr" element={<JsonPlaceHolderPageFrench />} />

@@ -54,7 +54,7 @@ export default function JsonPlaceHolderPage() {
       )}
 
       <div className="button-container">
-        <button className="btn-primary fetch-button" onClick={fetchPostData}>
+        <button className="btn-primary fetch-button" id="openSidebarButton" onClick={fetchPostData}>
           Get Post Data
         </button>
       </div>

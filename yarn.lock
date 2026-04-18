@@ -2011,10 +2011,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-userflow.js@^2.12.1:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/userflow.js/-/userflow.js-2.12.1.tgz#86b550702fba9a3ad8644181260d7953cc1a7d39"
-  integrity sha512-bLErWFGR368uRF6IguanciZJnfoPhRMA/VKJjOCBZEe1n45dU01nRVw1DL6G0gV/yx/6t5v7a+k9FZ3aoXgbTw==
+userflow.js@2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/userflow.js/-/userflow.js-2.13.0.tgz#abcdb1856654fd63a929523085b1548584aace44"
+  integrity sha512-Gnykzc9E88F3s2Z5LMoOrC5+Nb3v+mZhfuwtl7I09zkgA7e/l6pxS1KHQtxLvh/EyXHaSh/yAmpAhDUlZhuJrQ==
 
 uuid@8.3.2:
   version "8.3.2"

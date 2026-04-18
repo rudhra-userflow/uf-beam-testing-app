@@ -44,7 +44,7 @@ const AppPage: React.FC = () => {
             </a>
             <button
               className="btn-primary"
-              onClick={() => userflow.start("f2f1876e-6377-4917-9dfa-e650fcbf30a4")}
+              onClick={() => userflow.start("-6377-4917-9dfa-e650fcbf30a4")}
             >
               Start checklist using start()
             </button>
